@@ -53,3 +53,53 @@
   - Download and install Git from [git-scm.com](https://git-scm.com/). Verify the installation in your terminal :
 
         git --version
+
+## Git Config & Help
+
+  - Before committing, establish your identity and know how to find documentation.
+
+  - Set Identity :
+
+        git config --global user.name "Your Name"
+        git config --global user.email "your.email@example.com"
+
+  - Verify Configs :
+
+        git config --list
+
+## Git Help : Access help manuals directly inside your terminal.
+
+        git help commit   # Opens complete manual page for the commit command
+        git commit -h     # Displays quick, concise command line options
+
+
+##  Git Get Started & New Files
+
+### Initialize Repo : Turn an ordinary local directory into a watched Git repository.
+
+        cd path/to/your/project
+        git init
+
+### Tracking New Files : Create a new file (e.g., index.html) or track modifications. 
+  
+  - Check the status :
+
+        git status
+
+        # Use compact short view option
+        git status -s
+
+### Git Staging & Commit
+
+  - Git uses a unique 3-stage architecture : Working Directory (sandbox) ➔ Staging Area (loading dock) ➔ Local Repository (permanent snapshot).
+
+#### Git Staging : Prepare files for a snapshot.
+
+        git add index.html   # Stage a single file
+        git add .            # Stage all new, modified, and deleted files
+
+#### Git Commit : Create a permanent, labeled snapshot in history.
+
+        git commit -m "Initial commit: Add base layout structure"
+        # Shortcut option: Stage and commit tracked modifications simultaneously
+        git commit -a -m "Fast-tracked layout adjustments"
